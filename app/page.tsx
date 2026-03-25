@@ -17,11 +17,11 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="w-full px-4 py-6 flex gap-2">
-        <ul>
+      <div className="w-full px-4 py-6 flex flex-col md:flex-row gap-2">
+        <ul className="flex md:flex-col overflow-x-scroll gap-2 md:gap-0">
           {DUMMY_USERS.map((user, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="mx-2 md:mx-0">
                 <User user={user} setSelectedUserId={setSelectedUserId} />
               </li>
             );
