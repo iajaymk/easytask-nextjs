@@ -19,8 +19,8 @@ const User = ({
         <Image
           src={imageSrc}
           alt={user.name}
-          width={35}
-          height={35}
+          width={25}
+          height={25}
           className="rounded-full"
         />
         <p className="text-sm">{user.name}</p>

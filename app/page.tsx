@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Header from "./components/Header";
-import Task from "./components/Task";
+import Tasks from "./components/Tasks";
 import User from "./components/User";
 import { DUMMY_USERS } from "./data/dummy_data";
 import { UserType } from "./data/types";
@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="w-full px-4 py-6 flex flex-col md:flex-row gap-2">
+      <div className="w-full px-4 py-6 flex flex-col md:flex-row gap-5">
         <ul className="flex md:flex-col overflow-x-scroll gap-2 md:gap-0">
           {DUMMY_USERS.map((user, index) => {
             return (
@@ -28,7 +28,7 @@ export default function Home() {
           })}
         </ul>
 
-        <Task user={selectedUser()} />
+        <Tasks user={selectedUser()} />
       </div>
     </div>
   );
